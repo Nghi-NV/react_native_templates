@@ -1,0 +1,43 @@
+{
+  "name": "react_native_templates",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "debug": "REACT_DEBUGGER=\"rndebugger-open --open --port 8081\" yarn start",
+    "reset": "watchman watch-del-all && rm -rf $TMDIR/react-* && rm -rf node_modules && yarn cache clean",
+    "start:reset": "yarn start --reset-cache",
+    "generate": "plop --plopfile internals/generators/index.js"
+  },
+  "dependencies": {
+    "lodash": "^4.17.5",
+    "react": "^16.3.0-alpha.1",
+    "react-native": "0.54.4",
+    "react-native-device-info": "^0.21.4",
+    "react-native-localization": "^1.0.4",
+    "react-navigation": "^1.5.9",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^5.9.1",
+    "redux-saga": "^0.16.0",
+    "reselect": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-jest": "22.4.3",
+    "babel-preset-react-native": "4.0.0",
+    "jest": "22.4.3",
+    "node-plop": "0.7.0",
+    "plop": "1.8.0",
+    "react-test-renderer": "^16.3.0-alpha.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "rnpm": {
+    "assets": [
+      "src/assets/fonts"
+    ]
+  }
+}

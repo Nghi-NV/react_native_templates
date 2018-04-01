@@ -1,0 +1,45 @@
+/**
+*
+* Author: {{ author }}
+* Email: {{ email }}
+*
+*/
+
+import React, { Component } from 'react';
+{{#if hasRedux}}
+import { connect } from 'react-redux'
+{{/if}}
+{{#if hasMultiScreen}}
+import ViewPortrait from '../../views/{{ lowerCase name }}/index-portrait.js'
+import ViewLandscape from '../../views/{{ lowerCase name }}/index-landscape.js'
+{{else}}
+import ViewComponent from '../../views/{{ lowerCase name }}'
+{{/if}}
+
+class {{ properCase name }} extends Component { 
+  render() {
+    return (
+      {{#if hasMultiScreen}}
+      <ViewPortrait {...this.props} />
+      {{else}}
+      <ViewComponent {...this.props} />
+      {{/if}}
+    );
+  }
+}
+
+{{#if hasRedux}}
+
+
+const mapDispatchToProps = {
+}
+
+const mapStateToProps = (state) => {
+  return {
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)({{ properCase name }})
+{{else}}
+export default {{ properCase name }};
+{{/if}}

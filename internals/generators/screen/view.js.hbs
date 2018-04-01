@@ -1,0 +1,30 @@
+/**
+*
+* Author: {{ author }}
+* Email: {{ email }}
+*
+*/
+
+import React, { Component } from 'react';
+import { StyleSheet, View } from 'react-native';
+{{#if hasLanguage}}
+import langs from '../../languages/{{ lowerCase name }}';
+{{/if}}
+
+class {{ properCase name }} extends Component { 
+  render() {
+    return (
+      <View style={styles.container} >
+        
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1
+  },
+});
+
+export default {{ properCase name }};
