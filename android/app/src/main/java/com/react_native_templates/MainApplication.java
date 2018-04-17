@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.facebook.react.ReactApplication;
 import com.babisoft.ReactNativeLocalization.ReactNativeLocalizationPackage;
+import com.reactnativecomponent.splashscreen.RCTSplashScreenPackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -26,7 +27,8 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
             new ReactNativeLocalizationPackage(),
-            new RNDeviceInfo()
+            new RNDeviceInfo(),
+            new RCTSplashScreenPackage()
       );
     }
 
