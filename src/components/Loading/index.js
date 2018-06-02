@@ -1,13 +1,16 @@
 import React from 'react';
-import { StyleSheet, View , ActivityIndicator} from 'react-native';
+import { StyleSheet, View, ActivityIndicator } from 'react-native';
 
 const Loading = (props) => {
+  let { backgroundColor, colorIndicator } = props;
   return (
-    <View style={styles.container}>
-      <ActivityIndicator 
-        color="lightblue"
-        size="small"
-      />
+    <View style={[styles.container, backgroundColor ? { backgroundColor } : undefined]}>
+      <View style={styles.viewContent}>
+        <ActivityIndicator
+          color={colorIndicator ? colorIndicator : 'white'}
+          size="large"
+        />
+      </View>
     </View>
   );
 }
@@ -19,10 +22,13 @@ const styles = StyleSheet.create({
     top: 0,
     bottom: 0,
     left: 0,
-    right: 0,
-    backgroundColor: 'rgba(0, 0, 0, 0.6)',
+    right: 0
+  },
+  viewContent: {
+    flex: 1,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.6)',
   }
 })
 

@@ -1,22 +1,20 @@
 /**
-*
 * Author: {{ author }}
 * Email: {{ email }}
-*
 */
 
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 {{#if hasRedux}}
 import { connect } from 'react-redux'
 {{/if}}
 {{#if hasMultiScreen}}
-import ViewPortrait from '../../views/{{ lowerCase name }}/index-portrait.js'
-import ViewLandscape from '../../views/{{ lowerCase name }}/index-landscape.js'
+import ViewPortrait from '../../screens/{{ lowerCase name }}/index-portrait.js'
+import ViewLandscape from '../../screens/{{ lowerCase name }}/index-landscape.js'
 {{else}}
-import ViewComponent from '../../views/{{ lowerCase name }}'
+import ViewComponent from '../../screens/{{ lowerCase name }}'
 {{/if}}
 
-class {{ properCase name }} extends Component { 
+class {{ properCase name }} extends PureComponent { 
   render() {
     return (
       {{#if hasMultiScreen}}
@@ -29,8 +27,6 @@ class {{ properCase name }} extends Component {
 }
 
 {{#if hasRedux}}
-
-
 const mapDispatchToProps = {
 }
 

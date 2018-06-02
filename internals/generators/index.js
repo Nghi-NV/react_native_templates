@@ -1,8 +1,7 @@
 /**
- * generator/index.js
- *
- * Exports the generators so plop knows them
- */
+* Created by nghinv on Thu May 31 2018
+* Copyright (c) 2018 nghinv
+*/
 
 const screenGenerator = require('./screen');
 

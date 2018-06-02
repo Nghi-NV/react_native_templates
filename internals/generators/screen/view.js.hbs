@@ -5,13 +5,13 @@
 *
 */
 
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { StyleSheet, View } from 'react-native';
 {{#if hasLanguage}}
 import langs from '../../languages/{{ lowerCase name }}';
 {{/if}}
 
-class {{ properCase name }} extends Component { 
+class {{ properCase name }} extends PureComponent { 
   render() {
     return (
       <View style={styles.container} >

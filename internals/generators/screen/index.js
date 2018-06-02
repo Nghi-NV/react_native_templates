@@ -84,27 +84,27 @@ module.exports = {
       actions.push(
         {
           type: 'add',
-          path: '../../src/reducers/{{lowerCase name}}.js',
+          path: '../../src/redux/reducers/{{lowerCase name}}.js',
           templateFile: './screen/reducer.js.hbs',
           abortOnFail: true,
         }
       )
       actions.push({
         type: 'modify',
-        path: '../../src/sagas/index.js',
+        path: '../../src/redux/sagas/index.js',
         pattern: /(effects';\n)(?!.*import')/g,
         templateFile: './screen/saga-import.js.hbs',
       })
       actions.push({
         type: 'modify',
-        path: '../../src/sagas/index.js',
+        path: '../../src/redux/sagas/index.js',
         pattern: /(all\(\[\n)(?!.*...')/g,
         templateFile: './screen/saga-used.js.hbs',
       })
       actions.push(
         {
           type: 'add',
-          path: '../../src/actions/{{lowerCase name}}.js',
+          path: '../../src/redux/actions/{{lowerCase name}}.js',
           templateFile: './screen/action.js.hbs',
           abortOnFail: true,
         }
@@ -112,7 +112,7 @@ module.exports = {
       actions.push(
         {
           type: 'add',
-          path: '../../src/sagas/{{lowerCase name}}.js',
+          path: '../../src/redux/sagas/{{lowerCase name}}.js',
           templateFile: './screen/saga.js.hbs',
           abortOnFail: true,
         }
@@ -120,7 +120,7 @@ module.exports = {
       actions.push(
         {
           type: 'modify',
-          path: '../../src/reducers/index.js',
+          path: '../../src/redux/reducers/index.js',
           pattern: /(combineReducers\(\{\n)(?!.*\n')/g,
           templateFile: './screen/reducer-used.js.hbs',
         }
@@ -128,7 +128,7 @@ module.exports = {
       actions.push(
         {
           type: 'modify',
-          path: '../../src/reducers/index.js',
+          path: '../../src/redux/reducers/index.js',
           pattern: /('redux';\n)(?!.*import')/g,
           templateFile: './screen/reducer-import.js.hbs',
         }

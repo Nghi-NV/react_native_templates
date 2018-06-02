@@ -1,4 +1,4 @@
 module.exports = {
-	Author: 'NghiNguyen',
+	Author: 'nghinv',
 	Email: 'nghinv@luci.vn'
 }

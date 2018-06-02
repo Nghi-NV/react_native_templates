@@ -1,6 +1,11 @@
+/**
+* Created by nghinv on Thu May 31 2018
+* Copyright (c) 2018 nghinv
+*/
+
 import { takeLatest, put } from "redux-saga/effects";
 import { setLanguage } from '../actions/config';
-import { getLanguageDefault } from '../common/utils';
+import { getLanguageDefault } from '../../common/utils';
 
 function* getInitial(action) {
   try {
