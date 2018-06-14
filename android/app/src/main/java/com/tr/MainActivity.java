@@ -1,4 +1,4 @@
-package com.react_native_templates;
+package com.tr;
 
 import com.facebook.react.ReactActivity;
 import com.reactnativecomponent.splashscreen.RCTSplashScreen;
@@ -12,7 +12,7 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "react_native_templates";
+        return "TR";
     }
 
     @Override
