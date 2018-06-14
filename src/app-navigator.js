@@ -63,7 +63,7 @@ const mapDispathToProps = {
 
 const mapStateToProps = (state) => {
   return {
-    languages: state.config.language,
+    language: state.config.language,
     authen: state.authen.get('authenticated')
   }
 }
