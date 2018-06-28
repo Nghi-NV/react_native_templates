@@ -18,6 +18,7 @@
     "react-native": "^0.55.4",
     "react-native-device-info": "^0.21.4",
     "react-native-localization": "^1.0.4",
+    "react-native-material-kit": "^0.5.1",
     "react-native-router-flux": "^4.0.0-beta.31",
     "react-native-smart-splash-screen": "^2.3.5",
     "react-native-vector-icons": "^4.6.0",

@@ -11,13 +11,6 @@ import DeviceInfo from 'react-native-device-info';
 
 const WWW_URL_PATTERN = /^www\./i;
 
-export const safeAreaInsetX = { top: 24, bottom: 34 };
-export const paddingX = safeAreaInsetX.top;
-
-// The height of the navigation bar itself
-export const navigationBarHeight = 44;
-export const statusBarHeight = Platform.select({ ios: 20, android: StatusBar.currentHeight });
-
 /*
 * function detected device is iphoneX
 * return true when device is iphoneX
@@ -27,6 +20,13 @@ export const isX = (() => {
     Platform.OS === 'ios' && DeviceInfo.getModel() === 'iPhone X'
   );
 })();
+export const safeAreaInsetX = { top: 24, bottom: 34 };
+export const paddingX = isX ? safeAreaInsetX.top : 0;
+
+// The height of the navigation bar itself
+export const navigationBarHeight = 44;
+export const statusBarHeight = Platform.select({ ios: 20, android: StatusBar.currentHeight });
+export const heightNavBar = navigationBarHeight + Platform.select({ ios: statusBarHeight + paddingX, android: 0 });
 
 /*
 * Function remove console.log, console.error, console.warning

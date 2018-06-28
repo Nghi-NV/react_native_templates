@@ -13,4 +13,7 @@ export const FONT_WEIGHT_HEADER = "500";
 export const FONT_WEIGHT_TITLE = "400";
 export const FONT_WEIGHT_CONTENT = "300";
 
-export const COLOR_BACKGROUND = "steelblue";
+export const COLOR_BACKGROUND = "#eee";
+export const BACKGROUND_COLOR_NAVBAR = "steelblue";
+export const COLOR_TEXT_ACTIVE = "black";
+export const COLOR_TEXT_WHITE = "white";
