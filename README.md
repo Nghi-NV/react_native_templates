@@ -10,7 +10,6 @@
 
 1. Run `yarn install`
 2. Run `react-native link`
-3. Run `cd ios && pod install` 
 
 ### Rename project
 follow steps to rename project:
