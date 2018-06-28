@@ -22,7 +22,7 @@
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
-                                                      moduleName:@"react_native_templates"
+                                                      moduleName:@"TR"
                                                initialProperties:nil
                                                    launchOptions:launchOptions];
   [RCTSplashScreen open:rootView withImageNamed:@"splash"];

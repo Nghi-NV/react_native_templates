@@ -19,7 +19,7 @@ const mapDispathToProps = {
 
 const mapStateToProps = (state) => {
   return {
-    languages: state.config.languages
+    language: state.config.language
   }
 }
 

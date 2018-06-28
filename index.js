@@ -6,4 +6,4 @@
 import { AppRegistry } from 'react-native';
 import Setup from './src/setup';
 
-AppRegistry.registerComponent('react_native_templates', () => Setup);
+AppRegistry.registerComponent('TR', () => Setup);

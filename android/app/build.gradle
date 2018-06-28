@@ -98,7 +98,7 @@ android {
     buildToolsVersion "23.0.1"
 
     defaultConfig {
-        applicationId "com.react_native_templates"
+        applicationId "com.tr"
         minSdkVersion 16
         targetSdkVersion 22
         versionCode 1
